@@ -1,0 +1,41 @@
+{
+  "name": "@mateowartelle/extension-text-transform",
+  "description": "text transform extension for tiptap",
+  "version": "0.0.1",
+  "keywords": [
+    "tiptap",
+    "tiptap extension"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/packages/extension-text-transform/src/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "umd": "dist/index.umd.js",
+  "types": "dist/packages/extension-text-transform/src/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "devDependencies": {
+    "@tiptap/core": "^2.7.0-pre.0"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "^2.7.0-pre.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MateoWartelle/tiptap-extras",
+    "directory": "packages/extension-text-transform"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && rollup -c"
+  }
+}
